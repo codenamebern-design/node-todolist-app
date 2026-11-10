@@ -1,0 +1,18 @@
+<%- include('../components/head.ejs') %>
+<body>
+  <%- include('../components/nav.ejs') %>
+  <main>
+    <h1>Edit task</h1>
+
+    <form class="stack" action="/edit/<%= task._id %>" method="post">
+      <input type="text" name="task" value="<%= task.task %>" required>
+      <input type="date" name="date" value="<%= task.date %>" required>
+      <div class="form-actions">
+        <button type="submit" class="btn">Save</button>
+        <a href="/home">Cancel</a>
+      </div>
+    </form>
+  </main>
+  <%- include('../components/footer.ejs') %>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<%- include('../components/head.ejs') %>
+<body>
+  <%- include('../components/nav.ejs') %>
+  <main>
+    <h1>New task</h1>
+
+    <form class="stack" action="/create" method="post">
+      <input type="text" name="task" placeholder="What needs doing?" required>
+      <input type="date" name="date" required>
+      <button type="submit" class="btn">Add task</button>
+    </form>
+  </main>
+  <%- include('../components/footer.ejs') %>
+</body>
+</html>
